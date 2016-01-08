@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ page.metadata.title }} - {{ config.title }}</title>
+    <meta name="viewport" content="width=device-width">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="canonical" href="{{ config.domain }}">
+    <link href="/favico.ico" rel="icon">
+    <link href='http://fonts.googleapis.com/css?family=Ubuntu+Condensed' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="/css/main.css">
+
+    <!-- Facebook Tags -->
+    <meta property="og:description" content="{{ page.metadata.title }}">
+    <meta property="og:image" content="http://jaydson.org/images/logo-jaydson-share.jpg">
+    <meta property="og:site_name" content="{{ config.title }} - {{ page.metadata.title }}">
+    <meta property="og:title" content="{{ page.metadata.title }}">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="http://jaydson.org">
+</head>
+<body>
+	{% include "partials/navigation.html" %}
+	
+	<img class="page_image" src="{{ page.metadata.image }}" alt="{{ page.metadata.title }}">
+	<header class="postContent">
+	    <h2>
+	      {{ page.metadata.title | capitalize }}
+	    </h2>
+	    <div class="categories">
+	    	{% for category in page.metadata.categories %}
+	    		<span>
+	    			<a href="/categories/{{ category | lower | trim }}">
+	    				{{ category }}
+	    			</a>
+	    		</span>
+	    	{% endfor %}
+	    </div>
+	</header>
+
+	<article class="postContent">
+		{{ page.content }}
+	</article>
+
+	{% include "partials/disqus.html" %}
+
+	{% include "partials/footer.html" %}
+
+</body>
+</html>
+</body>
+</html>

@@ -1,0 +1,15 @@
+{
+  "name": "harmonic-theme-jaydson-2016",
+  "version": "0.0.1",
+  "description": "Jaydson blog theme",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "harmonic",
+    "harmonictheme"
+  ],
+  "author": "Jaydson Gomes <jayalemao@gmail.com>",
+  "license": "MIT"
+}

@@ -1,0 +1,11 @@
+{
+    "mycustomdata" : "wow",
+    "foo" : "bar",
+    "baz" : ["a","b"],
+    "title_1" : "Jaydson",
+	"title_2" : "Gomes",
+	"pages": [
+				{ "title":"speaking", "link":"/pages/speaking" },
+				{ "title":"talks", "link":"/pages/talks" }
+	]
+}

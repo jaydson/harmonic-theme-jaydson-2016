@@ -1,0 +1,12 @@
+<nav id="nav">
+    <ul class="container">
+       <li class="meni__item">
+            <a href="/">Home</a>
+        </li> 
+        {% for page in config.pages %}
+        <li class="meni__item">
+            <a href="{{ page.link }}">{{ page.title | capitalize }}</a>
+        </li>
+        {% endfor %}
+    </ul>
+</nav>

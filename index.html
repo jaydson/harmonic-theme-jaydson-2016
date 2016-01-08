@@ -1,0 +1,145 @@
+<!doctype html>
+<html>
+
+	{% include "partials/head.html" %}
+
+	<body>
+
+
+    	{% include "partials/navigation.html" %}
+
+		<!-- Home -->
+			<div class="wrapper style1 first">
+				<article class="container" id="top">
+					<div class="row">
+						<div class="4u 12u(mobile)">
+							<span class="image fit"><img src="https://s.gravatar.com/avatar/572696200604e59baa59ee90d61f7d02?s=400" alt="Jaydson Gomes" /></span>
+						</div>
+						<div class="8u 12u(mobile)">
+							<header>
+								<h1>Olá. Eu sou o <strong>Jaydson Gomes</strong>.</h1>
+							</header>
+							<p>Sou um desenvolvedor de software com 12 anos de experiência. Minha especialidade é o <strong>JavaScript</strong>. Eu sou o idealizador do <strong>BrazilJS</strong>, uma iniciativa que visa fomentar o mercado Web no Brasil. Faço a curadoria e organizo a <strong>BrazilJS Conf</strong>, a maior conferência JavaScript do mundo. Sou co-founder da <strong>Nasc</strong>, a empresa responsável por todas as ações da BrazilJS.
+							Ah, também sou um músico frustrado. Adoro ouvir, estudar e falar sobre música.</p>
+							<a href="#work" class="button big scrolly">Saiba mais sobre o que faço</a>
+						</div>
+					</div>
+				</article>
+			</div>
+
+		<!-- Work -->
+			<div class="wrapper style2">
+				<article id="work">
+					<header>
+						<h2>Aqui está um pouco do que eu faço</h2>
+						<p>Desenvolvimento de software, Música, davaneios e muito mais</p>
+					</header>
+					<div class="container">
+						<div class="row">
+							<div class="4u 12u(mobile)">
+								<section class="box style1">
+									<span class="icon featured fa-code"></span>
+									<h3>Artigos técnicos</h3>
+									<p>Uma das melhores formas de aprender é ensinar. É o que tento fazer aqui, escrever sobre minhas experiências técnicas sobre assuntos variados, incluindo JavaScript, HTML5, Node.js, etc.</p>
+								</section>
+							</div>
+							<div class="4u 12u(mobile)">
+								<section class="box style1">
+									<span class="icon featured fa-music"></span>
+									<h3>Música</h3>
+									<p>Sou movido a música. Desde muito pequeno eu escuto muita música. Sou um órfão da MTV (dos bons tempos). Adoro falar sobre música, e aqui no blog tento escrever sobre o que acho relevante.</p>
+								</section>
+							</div>
+							<div class="4u 12u(mobile)">
+								<section class="box style1">
+									<span class="icon featured fa-comments"></span>
+									<h3>Devaneios</h3>
+									<p>Ás vezes um tweet não é o suficiente, nestes casos gosto de escrever meus pensamentos por aqui. Eu poderia usar o Medium, ou o próprio Facebook, mas prefiro ter controle do meu próprio conteúdo.</p>
+								</section>
+							</div>
+						</div>
+					</div>
+					<footer>
+						<a href="#portfolio" class="button big scrolly">Veja alguns dos meus últimos posts</a>
+					</footer>
+				</article>
+			</div>
+
+		<!-- Portfolio -->
+			<div class="wrapper style3">
+				<article id="portfolio">
+					<header>
+						<h2>Aqui estão os últimos posts que escrevi</h2>
+						<p>Escolha um tema e navegue pelo Blog</p>
+					</header>
+					<div class="container">
+						<div class="row">
+							{% for post in posts %}
+								<div class="4u 12u(mobile)">
+									<article class="box style2" style="height:24em">
+										<a href="#" class="image featured">
+											{% if post.image %}
+												<img src="/{{ post.image }}" alt="{{ post.title }}" />
+											{% endif %}
+										</a>
+										<h3><a href="#">{{ post.title }}</a></h3>
+										<p>{{ post.description }}</p>
+									</article>
+								</div>
+							{% endfor %}
+						</div>
+					<footer>
+						<a href="#contact" class="button big scrolly">Me encontre por aí</a>
+					</footer>
+				</article>
+			</div>
+
+		<!-- Contact -->
+			<div class="wrapper style4">
+				<article id="contact" class="container 75%">
+					<div>
+						<div class="row">
+							<div class="12u">
+								<hr />
+								<h3>Me encontre nas redes socias</h3>
+								<ul class="social">
+									<li><a href="https://twitter.com/jaydson" class="icon fa-twitter"><span class="label"></span></a></li>
+									<li><a href="https://fb.com/jaydson" class="icon fa-facebook"><span class="label"></span></a></li>
+									<li><a href="https://github.com/jaydson" class="icon fa-github"><span class="label"></span></a></li>
+									<li><a href="https://instagram.com/jaydson" class="icon fa-instagram"><span></span></a></li>
+									<li><a href="https://www.youtube.com/channel/UCE7ReZBH1gKgRDbsUlNF1IQ" class="icon fa-youtube"><span></span></a></li>
+									<!--
+									<li><a href="#" class="icon fa-rss"><span>RSS</span></a></li>
+									
+									<li><a href="#" class="icon fa-foursquare"><span>Foursquare</span></a></li>
+									<li><a href="#" class="icon fa-skype"><span>Skype</span></a></li>
+									<li><a href="#" class="icon fa-soundcloud"><span>Soundcloud</span></a></li>
+									
+									<li><a href="#" class="icon fa-blogger"><span>Blogger</span></a></li>
+									<li><a href="#" class="icon fa-flickr"><span>Flickr</span></a></li>
+									<li><a href="#" class="icon fa-vimeo"><span>Vimeo</span></a></li>
+									-->
+								</ul>
+								<hr />
+							</div>
+						</div>
+					</div>
+					<footer>
+						<ul id="copyright">
+							<li>Site orgulhosamente desenvolvido com o <a href="https://github.com/jsrockshq/harmonic/">Harmonic</a></li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+						</ul>
+					</footer>
+				</article>
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/skel-viewport.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
